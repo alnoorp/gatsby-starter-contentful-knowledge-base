@@ -38,7 +38,7 @@ Home.propTypes = {
       nodes: is.arrayOf(
         is.shape({
           url: is.string.isRequired,
-          title: is.string.isRequired,
+          title: is.string,
         })
       ),
     }).isRequired,
