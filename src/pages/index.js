@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import Layout from '../templates/layout';
 import CategoryCard from '../components/category-card';
 import WhiteContainer from '../components/white-container';
+import NewContainer from '../components/new-container';
 import { withArticles } from '../utils/filters';
 import useSiteSettings from '../hooks/useSiteSettings';
 import SEO from '../components/seo';
@@ -74,6 +75,10 @@ export default function Home(props) {
             />
           ))}
         </WhiteContainer>
+        <NewContainer>
+          <Title>{settings.heading}</Title>
+          <Subtitle>{settings.subheading}</Subtitle>
+        </NewContainer>
       </Container>
     </Layout>
   );
