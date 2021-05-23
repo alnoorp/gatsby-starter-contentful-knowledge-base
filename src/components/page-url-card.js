@@ -39,9 +39,9 @@ export default function PageUrlCard(props) {
           href={props.url}
           onClick={(e) => {
             e.preventDefault();
-            // e.stopPropagation();
+            e.stopPropagation();
             console.log('item clicked...');
-            window.location.href = props.url;
+            window.location.assign(props.url);
             // if (e.metaKey) {
             //   chrome.tabs.create({ url: props.url, active: false });
             // } else {
