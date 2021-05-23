@@ -35,7 +35,19 @@ export default function PageUrlCard(props) {
   return (
     <Container>
       <Title>
-        <a href={props.url}>
+        <a
+          href={props.url}
+          onClick={(e) => {
+            window.location.href = props.url;
+            // if (e.metaKey) {
+            //   chrome.tabs.create({ url: props.url, active: false });
+            // } else {
+            //   window.location.assign(props.url);
+            // }
+            e.preventDefault();
+            e.stopPropagation();
+          }}
+        >
           <img
             src={`https://www.google.com/s2/favicons?domain=${props.url}`}
             className="favicon"
