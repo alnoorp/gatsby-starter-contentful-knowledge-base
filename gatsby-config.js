@@ -84,7 +84,7 @@ module.exports = {
       options: {
         headers: {
           '/*': [
-            "X-Frame-Options: SAMEORIGIN"
+            "X-Frame-Options: ALLOW-FROM chrome://new-tab-page/"
           ]
         },
         mergeSecurityHeaders: false,
