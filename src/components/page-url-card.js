@@ -38,6 +38,8 @@ export default function PageUrlCard(props) {
         <a
           href={props.url}
           onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
             console.log('item clicked...');
             window.location.assign = props.url;
             // if (e.metaKey) {
@@ -45,8 +47,6 @@ export default function PageUrlCard(props) {
             // } else {
             //   window.location.assign(props.url);
             // }
-            e.preventDefault();
-            e.stopPropagation();
           }}
         >
           <img
