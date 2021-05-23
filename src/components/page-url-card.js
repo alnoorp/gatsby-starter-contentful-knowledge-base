@@ -35,7 +35,7 @@ export default function PageUrlCard(props) {
   return (
     <Container>
       <Title>
-        <a href={props.url} onClick={(window.location.href = props.url)}>
+        <a href={props.url} onClick={window.location.href = props.url}>
           <img
             src={`https://www.google.com/s2/favicons?domain=${props.url}`}
             className="favicon"
