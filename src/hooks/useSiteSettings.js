@@ -15,7 +15,7 @@ export default function useSiteSettings() {
           description: siteDescriptionSeo
           logo {
             title
-            fixed(width: 160) {
+            fixed(width: 40) {
               src
               srcSet
               width
