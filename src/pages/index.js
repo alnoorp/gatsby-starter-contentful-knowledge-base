@@ -3,7 +3,8 @@ import is from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../templates/layout';
-import CategoryCard from '../components/category-card';
+// import CategoryCard from '../components/category-card';
+import PageUrlCard from '../components/page-url-card';
 // import WhiteContainer from '../components/white-container';
 import NewContainer from '../components/new-container';
 // import { withArticles } from '../utils/filters';
@@ -77,7 +78,7 @@ export default function Home(props) {
 */}
         <NewContainer>
           {pageUrls.map((pageUrl, index) => (
-            <CategoryCard url={pageUrl.url} key={index} />
+            <PageUrlCard url={pageUrl.url} key={index} />
           ))}
         </NewContainer>
       </Container>
