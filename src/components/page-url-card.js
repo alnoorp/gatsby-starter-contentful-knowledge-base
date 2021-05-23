@@ -42,7 +42,7 @@ const Title = styled.h3`
   }
 `;
 
-export default function CategoryCard(props) {
+export default function PageUrlCard(props) {
   return (
     <Container>
       <Title>
@@ -52,6 +52,6 @@ export default function CategoryCard(props) {
   );
 }
 
-CategoryCard.propTypes = {
+PageUrlCard.propTypes = {
   url: is.string.isRequired,
 };
