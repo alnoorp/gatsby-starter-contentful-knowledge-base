@@ -24,7 +24,7 @@ export default function Home(props) {
       <Container>
         <NewContainer>
           {pageUrls.map((pageUrl, index) => (
-            <PageUrlCard url={pageUrl.url} key={index} />
+            <PageUrlCard url={pageUrl.url} title={pageUrl.title} key={index} />
           ))}
         </NewContainer>
       </Container>
@@ -38,6 +38,7 @@ Home.propTypes = {
       nodes: is.arrayOf(
         is.shape({
           url: is.string.isRequired,
+          title: is.string.isRequired,
         })
       ),
     }).isRequired,
@@ -49,6 +50,7 @@ export const query = graphql`
     pageUrls: allContentfulPageUrl {
       nodes {
         url
+        title
       }
     }
   }

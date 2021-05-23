@@ -41,7 +41,7 @@ export default function PageUrlCard(props) {
             className="favicon"
             alt=""
           />
-          {props.url}
+          {props.title}
         </a>
       </Title>
     </Container>
@@ -50,4 +50,5 @@ export default function PageUrlCard(props) {
 
 PageUrlCard.propTypes = {
   url: is.string.isRequired,
+  title: is.string.isRequired,
 };
