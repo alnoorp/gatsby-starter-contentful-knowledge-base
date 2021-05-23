@@ -41,7 +41,7 @@ export default function PageUrlCard(props) {
             e.preventDefault();
             e.stopPropagation();
             console.log('item clicked...');
-            window.location.assign(props.url);
+            window.location.href = props.url;
             // if (e.metaKey) {
             //   chrome.tabs.create({ url: props.url, active: false });
             // } else {
