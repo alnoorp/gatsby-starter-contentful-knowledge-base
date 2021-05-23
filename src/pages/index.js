@@ -74,10 +74,10 @@ export default function Home(props) {
             />
           ))}
         </WhiteContainer>
-*/}{' '}
+*/}
         <NewContainer>
           {pageUrls.map((pageUrl, index) => (
-            <CategoryCard url={pageUrls.name} key={index} />
+            <CategoryCard url={pageUrl.url} key={index} />
           ))}
         </NewContainer>
       </Container>
