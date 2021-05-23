@@ -62,7 +62,7 @@ module.exports = {
         },
         serialize: ({ allSitePage }) =>
           allSitePage.nodes.map((node) => ({
-            url: `${process.env.URL}${node.path}`,
+            url: `http://${process.env.URL}${node.path}`,
             changefreq: 'daily',
             priority: 0.7,
           })),
@@ -83,12 +83,10 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {
-          '/*': [
-            "X-Frame-Options: ALLOW-FROM chrome://newtab/"
-          ]
+          '/*': ['X-Frame-Options: ALLOW-FROM chrome://newtab/'],
         },
         mergeSecurityHeaders: false,
-      }
+      },
     },
   ],
 };
