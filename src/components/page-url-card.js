@@ -1,7 +1,6 @@
 import React from 'react';
 import is from 'prop-types';
 import styled from '@emotion/styled';
-import { Link } from 'gatsby';
 
 const Container = styled.div`
   padding: 32px 32px 32px 64px;
@@ -46,7 +45,7 @@ export default function PageUrlCard(props) {
   return (
     <Container>
       <Title>
-        <Link to={props.url}>{props.url}</Link>
+        <a href={props.url}>{props.url}</a>
       </Title>
     </Container>
   );
