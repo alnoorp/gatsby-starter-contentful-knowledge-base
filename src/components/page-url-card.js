@@ -21,7 +21,7 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.img`
+const Title = styled.h3.img`
   margin-right: 10px;
   position: relative;
   vertical-align: middle;
