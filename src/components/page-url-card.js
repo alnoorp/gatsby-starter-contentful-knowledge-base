@@ -21,12 +21,14 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.h3.img`
-  margin-right: 10px;
-  position: relative;
-  vertical-align: middle;
-  top: -2px;
-  width: 32px;
+const Title = styled.h3`
+  & > img {
+    margin-right: 10px;
+    position: relative;
+    vertical-align: middle;
+    top: -2px;
+    width: 32px;
+  }
 `;
 
 export default function PageUrlCard(props) {
