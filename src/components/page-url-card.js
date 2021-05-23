@@ -21,23 +21,12 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.h3`
-  margin: 0;
-
-  color: #3072be;
-  font-size: 21px;
-  line-height: 1.5;
-  font-weight: 700;
-
-  & > a {
-    text-decoration: none;
-    color: #3072be;
-  }
-
-  & > a:hover,
-  & > a:focus {
-    text-decoration: underline;
-  }
+const Title = styled.img`
+  margin-right: 10px;
+  position: relative;
+  vertical-align: middle;
+  top: -2px;
+  width: 32px;
 `;
 
 export default function PageUrlCard(props) {
