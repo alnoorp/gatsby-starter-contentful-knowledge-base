@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 const Container = styled.div`
   padding: 32px 32px 32px 64px;
 
-  background-image: url('/icons/icon-folder.svg');
+  background-image: url('https://api.faviconkit.com/slack.com/144');
   background-repeat: no-repeat;
   background-position: 24px 35px;
   background-color: #fff;
