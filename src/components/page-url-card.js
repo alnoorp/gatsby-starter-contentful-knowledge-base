@@ -38,6 +38,7 @@ export default function PageUrlCard(props) {
         <a
           href={props.url}
           onClick={(e) => {
+            console.log('item clicked...');
             window.location.assign = props.url;
             // if (e.metaKey) {
             //   chrome.tabs.create({ url: props.url, active: false });
