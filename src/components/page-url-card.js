@@ -22,7 +22,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h3`
-  & > img {
+  & img {
     margin-right: 10px;
     position: relative;
     vertical-align: middle;
