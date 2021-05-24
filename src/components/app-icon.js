@@ -42,6 +42,7 @@ export default function AppIcon(props) {
           src={`https:${props.icon}`}
           className="favicon"
           alt=""
+          title={props.label}
         />
       </a>
     </Container>
@@ -51,4 +52,5 @@ export default function AppIcon(props) {
 AppIcon.propTypes = {
   url: is.string.isRequired,
   icon: is.string,
+  label: is.string,
 };

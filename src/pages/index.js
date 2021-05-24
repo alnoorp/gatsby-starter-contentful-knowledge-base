@@ -13,6 +13,13 @@ import SEO from '../components/seo';
 const Container = styled.div`
   max-width: 1000px;
   margin: 0 auto;
+
+  & ul {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+    padding-left: 0px;
+  }
 `;
 
 export default function Home(props) {
