@@ -42,7 +42,7 @@ export default function PageUrlCard(props) {
     <Container>
       <a href={props.url} target="_top">
         <img
-          src={`https://www.google.com/s2/favicons?domain=${props.url}`}
+          src={`https://www.google.com/s2/favicons?domain_url=${props.url}`}
           className="favicon"
           alt=""
         />
