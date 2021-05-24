@@ -12,10 +12,6 @@ const Text = styled.p`
   font-size: 16px;
   line-height: 1.5;
 
-  background-image: url('/icons/icon-file.svg');
-  background-repeat: no-repeat;
-  background-position: 36px center;
-
   &:hover {
     background-color: #f8f9fa;
   }
