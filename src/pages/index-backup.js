@@ -2,12 +2,10 @@ import React from 'react';
 import is from 'prop-types';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
-import Layout from '../templates/layout';
-// import CategoryCard from '../components/category-card';
-import PageUrlCard from '../components/page-url-card';
-// import WhiteContainer from '../components/white-container';
-import NewContainer from '../components/new-container';
-// import { withArticles } from '../utils/filters';
+import Layout from '../templates/layout-backup';
+import CategoryCard from '../components/category-card';
+import WhiteContainer from '../components/white-container';
+import { withArticles } from '../utils/filters';
 import useSiteSettings from '../hooks/useSiteSettings';
 import SEO from '../components/seo';
 import SearchForm from '../components/search-form';
@@ -23,7 +21,6 @@ const Hgroup = styled.div`
 
 const Title = styled.h1`
   margin-bottom: 12px;
-
   font-size: 28px;
   line-height: 1.5;
   font-weight: 700;
@@ -41,7 +38,6 @@ const SearchContainer = styled.div`
   width: 625px;
   margin: 0 auto;
   margin-bottom: 44px;
-
   @media screen and (max-width: 768px) {
     width: 100%;
     margin-bottom: 33px;
@@ -50,8 +46,7 @@ const SearchContainer = styled.div`
 
 export default function Home(props) {
   const settings = useSiteSettings();
-  // const categories = props.data.categories.nodes.filter(withArticles);
-  const pageUrls = props.data.pageUrls.nodes;
+  const categories = props.data.categories.nodes.filter(withArticles);
 
   return (
     <Layout>
@@ -62,10 +57,12 @@ export default function Home(props) {
           <Title>{settings.heading}</Title>
           <Subtitle>{settings.subheading}</Subtitle>
         </Hgroup>
+
         <SearchContainer>
           <SearchForm />
         </SearchContainer>
-        {/*        <WhiteContainer>
+
+        <WhiteContainer>
           {categories.map((category, index) => (
             <CategoryCard
               title={category.name}
@@ -75,68 +72,40 @@ export default function Home(props) {
             />
           ))}
         </WhiteContainer>
-*/}
-        <NewContainer>
-          {pageUrls.map((pageUrl, index) => (
-            <PageUrlCard url={pageUrl.url} key={index} />
-          ))}
-        </NewContainer>
       </Container>
     </Layout>
   );
 }
 
-// Home.propTypes = {
-//   data: is.shape({
-//     categories: is.shape({
-//       nodes: is.arrayOf(
-//         is.shape({
-//           name: is.string.isRequired,
-//           slug: is.string.isRequired,
-//           description: is.string.isRequired,
-//           articles: is.arrayOf(
-//             is.shape({
-//               id: is.string.isRequired,
-//             })
-//           ),
-//         })
-//       ),
-//     }).isRequired,
-//   }).isRequired,
-// };
-
 Home.propTypes = {
   data: is.shape({
-    pageUrls: is.shape({
+    categories: is.shape({
       nodes: is.arrayOf(
         is.shape({
-          url: is.string.isRequired,
+          name: is.string.isRequired,
+          slug: is.string.isRequired,
+          description: is.string.isRequired,
+          articles: is.arrayOf(
+            is.shape({
+              id: is.string.isRequired,
+            })
+          ),
         })
       ),
     }).isRequired,
   }).isRequired,
 };
 
-// export const query = graphql`
-//   query {
-//     categories: allContentfulKbAppCategory {
-//       nodes {
-//         name
-//         description: previewDescription
-//         slug
-//         articles: kbapparticle {
-//           id
-//         }
-//       }
-//     }
-//   }
-// `;
-
 export const query = graphql`
   query {
-    pageUrls: allContentfulPageUrl {
+    categories: allContentfulKbAppCategory {
       nodes {
-        url
+        name
+        description: previewDescription
+        slug
+        articles: kbapparticle {
+          id
+        }
       }
     }
   }

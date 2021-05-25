@@ -20,9 +20,7 @@ const SearchContainer = styled(Wrap)`
 const SearchWrap = styled.div`
   width: 625px;
   margin: 0 auto;
-
   margin-bottom: 12px;
-
   @media screen and (max-width: 768px) {
     width: 100%;
   }
